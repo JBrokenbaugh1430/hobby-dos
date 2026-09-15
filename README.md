@@ -3,4 +3,9 @@ This may be made distributable in the future.
 
 
 
-A basic overview of the compilation process:
+## A basic overview of the compilation process of this:
+1. The code for the bootloader and kernel are written
+2. A fresh FAT16 disk image is made
+3. The bootloader is compiled to a binary and inserted into the MBR
+4. The kernel is compiled to a binary and copied to the disk image
+5. The disk image is loaded as a virtual machine in QEMU
