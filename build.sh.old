@@ -1,0 +1,4 @@
+smlrcc -flat16 -origin 0x7C00 -doss -nobss -entry _boot -S bootloader.c -o bootloader.asm   
+
+nasm -f bin bootloader.asm -o bootloader.bin
+qemu-system-i386 -smp 1 -drive file=bootloader.bin,format=raw -monitor stdio
